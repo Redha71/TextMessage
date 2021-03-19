@@ -5,8 +5,8 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="py-12 " >
+        <div class="max-w-7xl mx-auto sm:px-6 ">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="wrapper">
                     @php
@@ -18,7 +18,7 @@
 
 
                     <!-- Content Wrapper. Contains page content -->
-                    <div class="content-wrapper">
+                    <div class="content-wrapper " style="margin-left: 0px !important;">
                       <!-- Content Header (Page header) -->
                       <section class="content-header">
                         <div class="container-fluid">
@@ -99,12 +99,12 @@
                                         <tbody>
 
 
-                                                @foreach ($messages as $item)
+                                                @foreach ($messages as $key=>$item)
                                                 <tr>
-                                                <td>{{ $item->id }}</td>
+                                                <td>{{ $key+1 }}</td>
                                                 <td>{{ $item->user_id }}</td>
                                                 <td>{{ $item->name }}</td>
-                                                 <td ><textarea  rows="3" cols="30" style="border: none;box-sizing: border-box;
+                                                 <td ><textarea  rows="3" cols="60%" style="border: none;box-sizing: border-box;
                                                      display: flex;" readonly>
                                                         {{ $item->message  }}
                                                      </textarea></td>
@@ -130,7 +130,7 @@
                         <!-- ./row -->
                       </section>
                       <!-- /.content -->
-                    </div>
+
                     <!-- /.content-wrapper -->
                     <footer class="main-footer">
 
@@ -143,6 +143,7 @@
                     </aside>
                     <!-- /.control-sidebar -->
                   </div>
+
             </div>
         </div>
     </div>
